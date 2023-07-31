@@ -1,0 +1,35 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+     
+}
+body{
+    background-color: rgb(156, 152, 152);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    font-size: 20px;
+    background-color: white;
+    padding: 40px 40px;
+}
+
+label{
+    padding: 10px 0;
+}
+ input{
+    padding: 10px 0;
+ }
+
+.button{
+    font-size: 20px;
+    color: white;
+    background-color: blue;
+    border-radius: 7px;
+    border: none;
+}

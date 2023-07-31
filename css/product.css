@@ -1,0 +1,36 @@
+section{
+    padding: 15px 0px;
+}
+
+.title{
+    font-size: 30px;
+    font-weight: 600;
+    width: 25%;
+    padding: 7px 7px;
+    background-color: blue;
+    color: antiquewhite;
+}
+
+.product h1{
+    font-size: 25px;
+    font-weight: 400;
+    width: inherit;
+    padding: 5px 5px;
+    background-color: aqua;
+    color: #fff;
+}
+
+.product p{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.product button {
+    padding: 7px 14px;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    color: antiquewhite;
+    background-color: blueviolet;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newsletter</title>
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+    <div class="main">
+        <form action="http://localhost:3000/upload" method="POST" enctype="multipart/form-data">
+            <label for="">Write the Title :</label>
+            <input type="text"  name="textData">
+            <label for="" >Upload images :</label>
+            <input type="file" name="image">
+            <input class="button" type="submit">
+            <br>
+        </form>
+        <div class="btnDelete">
+            <button id="deleteDataBtn">Delete All Data</button>        
+        </div>
+    </div>
+
+
+
+    <script>
+        // Function to delete all data from the database
+        const deleteAllData = async () => {
+          try {
+            const response = await fetch('http://localhost:3000/deleteAllData', {
+              method: 'DELETE',
+            });
+      
+            const data = await response.json();
+      
+            if (data.success) {
+              alert(data.message);
+            } else {
+              alert('Failed to delete data.');
+            }
+          } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while deleting data.');
+          }
+        };
+      
+        // Attach a click event listener to the button
+        const deleteDataBtn = document.getElementById('deleteDataBtn');
+        deleteDataBtn.addEventListener('click', deleteAllData);
+      </script>
+
+    <script>
+      // Check for a valid token on page load
+      document.addEventListener('DOMContentLoaded', () => {
+        const token = localStorage.getItem('token');
+        if (!token) {
+          // Redirect to login page if no token is present
+          window.location.href = 'http://localhost:5500/login.html';
+        }
+      });
+    </script>
+
+</body>
+</html>

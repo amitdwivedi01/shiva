@@ -229,7 +229,7 @@
                                     <p>- Gloss and transparency</p>
                                     </div>
                                     
-                                    <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="2500" >DOWNLOAD PDF</a>                                    
+                                    <a class="link resinlink" href="./images/SPCRYL-160-EH.pdf" data-aos="fade-up" data-aos-duration="2500" download >DOWNLOAD PDF</a>                                    
                                 </div>
                                 
                             </div>
@@ -258,7 +258,7 @@
                                     <p>- Low viscosity</p>
                                     </div>
                                     
-                                    <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="2500">DOWNLOAD PDF</a>                                    
+                                    <a class="link resinlink" href="./images/SPCRYL-160-MEA.pdf" data-aos="fade-up" data-aos-duration="2500" download>DOWNLOAD PDF</a>                                    
                                 </div>
                                 
                             </div>
@@ -287,7 +287,7 @@
                                     
                                     </div>
                                     
-                                    <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="2500">DOWNLOAD PDF</a>                                    
+                                    <a class="link resinlink" href="./images/SPCRYL-170-E.pdf" data-aos="fade-up" data-aos-duration="2500" download>DOWNLOAD PDF</a>                                    
                                 </div>
                                 
                             </div>
@@ -316,7 +316,7 @@
                                     <p style="color: white;">- Low VOC solution</p>
                                     </div>
                                     
-                                    <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="1000">DOWNLOAD PDF</a>                                    
+                                    <a class="link resinlink" href="./images/SPCRYL-296.pdf" data-aos="fade-up" data-aos-duration="1000" download>DOWNLOAD PDF</a>                                    
                                 </div>
                                 
                             </div>
@@ -343,7 +343,7 @@
                                     <p style="color: white;">- Low VOC solution</p>
                                     </div>
                                     
-                                    <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="1000">DOWNLOAD PDF</a>                                    
+                                    <a class="link resinlink" href="./images/SPCRYL-396.pdf" data-aos="fade-up" data-aos-duration="1000" download>DOWNLOAD PDF</a>                                    
                                 </div>
                                 
                             </div>
@@ -370,7 +370,7 @@
                                     <p style="color: white;">- Low VOC solution</p>
                                     </div>
                                     
-                                    <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="1000">DOWNLOAD PDF</a>                                    
+                                    <a class="link resinlink" href="./images/SPCRYL-496.pdf" data-aos="fade-up" data-aos-duration="1000" download>DOWNLOAD PDF</a>                                    
                                 </div>
                                 
                             </div>
@@ -490,6 +490,28 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <!-- Javascripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 100) {
+                $('.logoC').removeClass('logo-top-info');
+                $('.logoC').addClass('logo-top-infoo');
+                $('.headerC').removeClass('header-con');
+                $('.headerC').addClass('header-conn');
+                document.querySelector('nav').removeAttribute('id', 'navbar');
+                document.querySelector('nav').setAttribute('id', 'navbarr');
+            }
+            else {
+                $('.logoC').removeClass('logo-top-infoo');
+                $('.logoC').addClass('logo-top-info');
+                $('.headerC').removeClass('header-conn');
+                $('.headerC').addClass('header-con');
+                document.querySelector('nav').removeAttribute('id', 'navbarr');
+                document.querySelector('nav').setAttribute('id', 'navbar');
+            }
+        });
+    }); 
+</script>
     <!-- Jquery Library -->
     <script src="js/jquery.min.js"></script>
     <!-- Bootstrap core JavaScript -->

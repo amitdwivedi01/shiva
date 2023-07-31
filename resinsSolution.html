@@ -228,7 +228,7 @@
                                     <p>- Low VOC solution</p>
                                     </div>
                                     
-                                    <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="2500" >DOWNLOAD PDF</a>                                    
+                                    <a class="link resinlink" href="./images/SPCRYL-50-ECO-SPCRUL-55-ECO.pdf" data-aos="fade-up" data-aos-duration="2500" download >DOWNLOAD PDF</a>                                    
                                 </div>
                                 
                             </div>
@@ -255,7 +255,7 @@
                                     <p>- Good Resolubility</p>
                                     </div>
                                     
-                                    <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="2500">DOWNLOAD PDF</a>                                    
+                                    <a class="link resinlink" href="./images/SPCRYL-75-ECO.pdf" data-aos="fade-up" data-aos-duration="2500" download>DOWNLOAD PDF</a>                                    
                                 </div>
                                 
                             </div>
@@ -281,7 +281,7 @@
                                     <p style="color: white;">- Low VOC solution</p>
                                     </div>
                                     
-                                    <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="2500">DOWNLOAD PDF</a>                                    
+                                    <a class="link resinlink" href="./images/SPCRYL-60-ECO-SPCRYL-61.pdf" data-aos="fade-up" data-aos-duration="2500" download>DOWNLOAD PDF</a>                                    
                                 </div>
                                 
                             </div>
@@ -294,7 +294,7 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <h4 class="services-title-one subtitle">Description</h4>
-                                    <p>SPCRYL 63 is a customized high molecular weight resin solution of SPCRYL HOFG for water-based overprint varnishes and inks.</p>
+                                    <p>SPCRYL 61 is a customized mid molecular weight resin solution of SPCRYL MOFG for water-based overprint varnishes and inks.</p>
                                 </div>
                                 <div class="col-sm-6">
                                     <h4 class="services-title-one subtitle">Key features & Benefits</h4>
@@ -307,7 +307,7 @@
                                     <p style="color: white;">- Low VOC solution</p>
                                     </div>
                                     
-                                    <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="2500">DOWNLOAD PDF</a>                                    
+                                    <a class="link resinlink" href="./images/SPCRYL-60-ECO-SPCRYL-61.pdf" data-aos="fade-up" data-aos-duration="2500" download>DOWNLOAD PDF</a>                                    
                                 </div>
                                 
                             </div>
@@ -333,7 +333,7 @@
                                     <p style="color: white;">- Low VOC solution</p>
                                     </div>
                                     
-                                    <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="1000">DOWNLOAD PDF</a>                                    
+                                    <a class="link resinlink" href="./images/SPCRYL-63.pdf" data-aos="fade-up" data-aos-duration="1000" download>DOWNLOAD PDF</a>                                    
                                 </div>
                                 
                             </div>
@@ -453,6 +453,28 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <!-- Javascripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 100) {
+                $('.logoC').removeClass('logo-top-info');
+                $('.logoC').addClass('logo-top-infoo');
+                $('.headerC').removeClass('header-con');
+                $('.headerC').addClass('header-conn');
+                document.querySelector('nav').removeAttribute('id', 'navbar');
+                document.querySelector('nav').setAttribute('id', 'navbarr');
+            }
+            else {
+                $('.logoC').removeClass('logo-top-infoo');
+                $('.logoC').addClass('logo-top-info');
+                $('.headerC').removeClass('header-conn');
+                $('.headerC').addClass('header-con');
+                document.querySelector('nav').removeAttribute('id', 'navbarr');
+                document.querySelector('nav').setAttribute('id', 'navbar');
+            }
+        });
+    }); 
+</script>
     <!-- Jquery Library -->
     <script src="js/jquery.min.js"></script>
     <!-- Bootstrap core JavaScript -->
@@ -475,3 +497,8 @@
 </body>
 
 </html>
+
+
+
+
+

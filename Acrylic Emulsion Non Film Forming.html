@@ -233,7 +233,7 @@
                                 <p>- Cost effective</p>
                             </div>
 
-                            <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="2500">DOWNLOAD
+                            <a class="link resinlink" href="./images/SPCRYL-EOH.pdf" data-aos="fade-up" data-aos-duration="2500" download>DOWNLOAD
                                 PDF</a>
                         </div>
 
@@ -264,7 +264,7 @@
                                 <!-- <p>- Low viscosity</p> -->
                             </div>
 
-                            <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="2500">DOWNLOAD
+                            <a class="link resinlink" href="./images/SPCRYL-EO.pdf" data-aos="fade-up" data-aos-duration="2500" download>DOWNLOAD
                                 PDF</a>
                         </div>
 
@@ -294,7 +294,7 @@
 
                             </div>
 
-                            <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="2500">DOWNLOAD
+                            <a class="link resinlink" href="./images/SPCRYL-EO-T.pdf" data-aos="fade-up" data-aos-duration="2500" download>DOWNLOAD
                                 PDF</a>
                         </div>
 
@@ -325,7 +325,7 @@
                                 <p> </p>
                             </div>
 
-                            <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="1000">DOWNLOAD
+                            <a class="link resinlink" href="./images/SPCRYL-OPH.pdf" data-aos="fade-up" data-aos-duration="1000" download>DOWNLOAD
                                 PDF</a>
                         </div>
 
@@ -355,7 +355,7 @@
                                 <p></p>
                             </div>
 
-                            <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="1000">DOWNLOAD
+                            <a class="link resinlink" href="./images/SPCRYL-OPHF.pdf" data-aos="fade-up" data-aos-duration="1000" download>DOWNLOAD
                                 PDF</a>
                         </div>
 
@@ -383,7 +383,7 @@
                                 <p>- Excellent solvent and detergent resistance</p>
                             </div>
 
-                            <a class="link resinlink" href="#" data-aos="fade-up" data-aos-duration="1000">DOWNLOAD
+                            <a class="link resinlink" href="./images/SPCRYL-538A.pdf" data-aos="fade-up" data-aos-duration="1000" download>DOWNLOAD
                                 PDF</a>
                         </div>
 
@@ -504,6 +504,28 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <!-- Javascripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 100) {
+                $('.logoC').removeClass('logo-top-info');
+                $('.logoC').addClass('logo-top-infoo');
+                $('.headerC').removeClass('header-con');
+                $('.headerC').addClass('header-conn');
+                document.querySelector('nav').removeAttribute('id', 'navbar');
+                document.querySelector('nav').setAttribute('id', 'navbarr');
+            }
+            else {
+                $('.logoC').removeClass('logo-top-infoo');
+                $('.logoC').addClass('logo-top-info');
+                $('.headerC').removeClass('header-conn');
+                $('.headerC').addClass('header-con');
+                document.querySelector('nav').removeAttribute('id', 'navbarr');
+                document.querySelector('nav').setAttribute('id', 'navbar');
+            }
+        });
+    }); 
+</script>
     <!-- Jquery Library -->
     <script src="js/jquery.min.js"></script>
     <!-- Bootstrap core JavaScript -->
