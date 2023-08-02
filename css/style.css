@@ -310,7 +310,7 @@ main.main {
 
 .top-info h3 {
     font-size: 15px;
-    color: #093eb6;
+    color: #30CFD0;
     font-weight: bold;
     line-height: 1.2;
     margin-top: 0;
@@ -470,7 +470,7 @@ ul.main-menu li:last-child a {
 
 ul.main-menu li a:hover,
 ul.main-menu li.active>a {
-    color: #093eb6;
+    color: #30CFD0;
 }
 
 ul.main-menu>li {
@@ -976,7 +976,18 @@ h2.color-title {
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    background: #ffda44;
+    background: #30CFD0;
+    margin: 0;
+    padding: 0 15px;
+    line-height: 28px;
+}
+
+h1.color-title {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: #30CFD0;
     margin: 0;
     padding: 0 15px;
     line-height: 28px;
@@ -2217,15 +2228,15 @@ ul.download-list li span {
 
 .contact-box {
     padding: 30px 40px;
-    background: #ffda44;
+    background: #30CFD0;
 }
 
 .pre-footer>div:nth-child(2n) .contact-box {
-    background: #ffd427;
+    background: #30CFD0;
 }
 
 .pre-footer>div:nth-child(3n) .contact-box {
-    background: #ffd013;
+    background: #30CFD0;
 }
 
 .contact-box i.fa {
@@ -2266,12 +2277,15 @@ footer .footer .widgets {
 }
 
 footer {
-    padding: 35px 0;
+    padding: 35px 0 0 0;
     background: #020e28;
 }
 
 .copyright {
-    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
 }
 
 .about-txt img {
@@ -2365,7 +2379,7 @@ h2.widget-title {
     outline: none;
 }
 
-.copyright-bar p {
+/* .copyright-bar p {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.33);
     line-height: 1.857;
@@ -2383,7 +2397,7 @@ h2.widget-title {
 
 .copyright-bar span {
     padding-right: 15px;
-}
+} */
 
 .row.pre-footer {
     position: relative;
@@ -2405,14 +2419,14 @@ h2.widget-title {
         margin-top: 0;
     }
 
-    .copyright-bar>div {
+    /* .copyright-bar>div {
         text-align: center;
         padding-top: 15px;
     }
 
     .copyright-bar>div:first-child {
         padding-top: 0;
-    }
+    } */
 
     .row.pre-footer {
         padding: 0 15px;
@@ -2439,20 +2453,20 @@ h2.widget-title {
     }
 }
 
-@media all and (max-width: 480px) {
+/* @media all and (max-width: 480px) {
     .copyright-bar span {
         display: block;
         visibility: hidden;
         height: 5px;
     }
-}
+} */
 
 /*Contact Page Styles*/
 
 .contact-area-box {
     border: 1px solid rgba(244, 244, 244, 0.8);
     background: #ffffff;
-    box-shadow: 1px 1.7px 2px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 20px 20px 0px rgba(0, 0, 0, 0.1);
     padding: 25px 30px;
 }
 
@@ -2602,7 +2616,7 @@ button.btn.btn-warning {
 }
 
 button.btn.btn-warning:hover {
-    background: #ffda44;
+    background: #30CFD0;
 }
 
 @media (max-width: 1199px) and (min-width: 991px) {
@@ -2699,7 +2713,7 @@ section.about-cta {
 
 .cta {
     padding: 40px 45px;
-    background: #ffda44;
+    background: #30CFD0;
 }
 
 .cta h2 {
@@ -4117,7 +4131,7 @@ ul.nav-tabs {
 .titleclass hr {
     height: 2px;
     width: 100px;
-    background-color: #ffda44;
+    background-color: #30CFD0;
     margin-top: 0px;
 }
 
@@ -4131,7 +4145,7 @@ ul.nav-tabs {
         height: 1px;
         width: 100px;
         margin: 0;
-        background-color: #ffda44;
+        background-color: #30CFD0;
     }
 }
 
@@ -4259,7 +4273,7 @@ body::-webkit-scrollbar-thumb {
     height: 1px;
     width: 50px;
     margin: 0;
-    background-color: #ffda44;
+    background-color: #30CFD0;
 }
 
 .contactBox {
@@ -4295,7 +4309,7 @@ body::-webkit-scrollbar-thumb {
 .technicalTitle hr {
     height: 2px;
     width: 100px;
-    background-color: #ffda44;
+    background-color: #30CFD0;
     margin-top: 0px;
 }
 
@@ -4419,7 +4433,7 @@ body::-webkit-scrollbar-thumb {
 
 .resintitle hr {
     width: 50%;
-    border-bottom: 1px solid #ffda44;
+    border-bottom: 1px solid #30CFD0;
 }
 
 .resintitle h3 {
@@ -4546,6 +4560,20 @@ body::-webkit-scrollbar-thumb {
 
 .service-cont{
     margin-top: 50px;
+    margin-bottom:80px;
+}
+
+.service-cont li{
+    font-size: 14px;
+    padding: 5px 0;
+    font-weight: 500;
+}
+
+.about-services h6{
+    font-size: 14px;
+    padding: 0px 0;
+    font-weight: 500;
+    color: #8d8d8d;
 }
 
 
@@ -4563,7 +4591,7 @@ nav .stroke ul li a:after{
   width: 0%;
   content: '.';
   color: transparent;
-  background: #1b14ffd8;
+  background: #30CFD0;
   border-radius: 2px;
   height: 2px;
   transition: all 0.5s ease-in-out;
@@ -4575,6 +4603,12 @@ nav .stroke ul li a:hover:after {
 .text-gradient {
   /* font-size: 72px; */
 background: linear-gradient(to right, #30CFD0 0%, #330867 100% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.group-company{
+    background: linear-gradient(to right, #30CFD0 30%, #330867 100% );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

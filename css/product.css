@@ -2,9 +2,9 @@ section{
     padding: 15px 0px;
 }
 
-.title{
-    font-size: 30px;
-    font-weight: 600;
+.title1{
+    font-size: 30px !important;
+    font-weight: 600 !important;
     width: 25%;
     padding: 7px 7px;
     background-color: blue;

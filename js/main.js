@@ -116,6 +116,12 @@ Version: 1.0
 
 })(jQuery);
 
+// Get the current year
+const currentYear = new Date().getFullYear();
+
+// Set the current year in the HTML
+document.getElementById('copyright').innerText = `© Copyright www.shivaPerformance.com ${currentYear}. All Rights Reserved.`;
+
 
 // const ifHover = document.querySelector(".dropdown2")
 
