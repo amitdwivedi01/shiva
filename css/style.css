@@ -2039,6 +2039,7 @@ section.home-partners h2.title-2 {
     -moz-transition: 0.5s ease all;
     -ms-transition: 0.5s ease all;
     transition: 0.5s ease all;
+
 }
 
 .panel-default>.panel-heading:hover {
@@ -2057,6 +2058,7 @@ h4.panel-title {
     color: #093eb6;
     display: block;
     position: relative;
+    -webkit-text-fill-color: #093eb6;
 }
 
 .panel-default>.panel-heading a:hover {
@@ -2297,10 +2299,10 @@ footer {
 }
 
 .widgets-social a {
-    background: #ffda44;
+    background: #30CFD0;
     width: 36px;
     height: 36px;
-    color: #000;
+    color: #000000;
     display: inline-block;
     line-height: 36px;
     text-align: center;
@@ -2315,7 +2317,7 @@ footer {
 
 .widgets-social a:hover {
     transform: rotate(360deg);
-    background: #eaba0e;
+    background: #30CFD0;
 }
 
 h2.widget-title {
@@ -4611,4 +4613,21 @@ background: linear-gradient(to right, #30CFD0 0%, #330867 100% );
     background: linear-gradient(to right, #30CFD0 30%, #330867 100% );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+/* 
+.product-card:nth-child(1){
+    border: 1px solid #002885
+} */
+
+.product_read{
+    width: 40%;
+    border: none;
+    height: 35px;
+    border-radius: 2px;
+    font-size: 16px;
+    transition: 0.5s ease;
+}
+
+.product-card__p{
+    font-size: 16px;
 }
