@@ -368,7 +368,7 @@ span.forex i {
 }
 
 .social ul.social-icons li a:hover {
-    background: #093eb6;
+    background: #30CFD0;
 }
 
 .social ul.social-icons li a {
@@ -379,7 +379,7 @@ span.forex i {
     height: 52px;
     line-height: 52px;
     text-align: center;
-    background: rgba(9, 62, 182, 0.65);
+    background: #30CFD0;
     color: #fff;
     border-radius: 50%;
     margin-right: 15px;
@@ -1093,7 +1093,7 @@ section.home-ceo {
 
 .row.ceo {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .row.ceo>div {
@@ -1662,7 +1662,7 @@ span.date {
 }
 
 .blog-slide:hover .flex-direction-nav .flex-prev {
-    opacity: 0.7;
+    opacity: 1;
     left: 10px;
 }
 
@@ -1671,7 +1671,7 @@ span.date {
 }
 
 .blog-slide:hover .flex-direction-nav .flex-next {
-    opacity: 0.7;
+    opacity: 1;
     right: 10px;
 }
 
@@ -2340,7 +2340,7 @@ h2.widget-title {
 
 .quick-links ul li a:hover,
 .our-services ul li a:hover {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 1);
 }
 
 .newsletter p {
@@ -2945,7 +2945,7 @@ section.about-employees {
     display: block;
     width: 100%;
     height: 0%;
-    background: rgba(255, 218, 68, 0.7);
+    background: rgba(255, 218, 68, 1);
     top: 0;
     left: 0;
     -webkit-transition: 0.5s ease all;
@@ -3508,7 +3508,7 @@ section.services-highlights {
 }
 
 .service-slider:hover .flex-direction-nav .flex-prev {
-    opacity: 0.7;
+    opacity: 1;
     left: 10px;
 }
 
@@ -3517,7 +3517,7 @@ section.services-highlights {
 }
 
 .service-slider:hover .flex-direction-nav .flex-next {
-    opacity: 0.7;
+    opacity: 1;
     right: 10px;
 }
 
@@ -3976,7 +3976,7 @@ ul.nav-tabs {
 .sk-cube-grid .sk-cube {
     width: 33%;
     height: 33%;
-    background-color: #ffda44;
+    background-color: #30CFD0;
     float: left;
     -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
     animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
@@ -4091,6 +4091,14 @@ ul.nav-tabs {
     font-weight: bolder;
     color: whitesmoke;
     font-size: 80px;
+}
+
+@media screen and (max-width: 990px) {
+    .htext {
+        font-weight: bolder;
+        color: whitesmoke;
+        font-size: 40px;
+    }
 }
 
 /* .titleclass{
@@ -4221,7 +4229,9 @@ p {
 }
 
 .homenew {
-    background-image: url("../images/Siv\ 2.png");
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(48,164,208,0.4654236694677871) 98%, rgba(45,80,16,1) 100%);
+    background-image: url("../images/Shiva\ Photos.jpg");
     background-attachment: fixed;
     width: 100%;
     object-fit: cover;
@@ -4404,6 +4414,7 @@ body::-webkit-scrollbar-thumb {
 
 .download-brochure {
     display: flex;
+    /* flex-direction: col; */
     align-items: stretch;
     justify-content: space-between;
 }
@@ -4561,8 +4572,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .service-cont{
-    margin-top: 50px;
-    margin-bottom:80px;
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    background:#f4f5f8;
 }
 
 .service-cont li{
@@ -4630,4 +4643,9 @@ background: linear-gradient(to right, #30CFD0 0%, #330867 100% );
 
 .product-card__p{
     font-size: 16px;
+}
+
+.flexslider .flex-direction-nav .flex-prev,
+.flexslider .flex-direction-nav .flex-next {
+  display: none;
 }

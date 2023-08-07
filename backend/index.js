@@ -8,6 +8,7 @@ const path = require("path");
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const secretKey = 'your_secret_key_shiva_industries';
+const nodemailer = require('nodemailer');
   
 const app = express();
 const PORT = 3000;
@@ -106,24 +107,41 @@ app.get("/data", async (req, res) => {
     }
   });
 
-  // app.post('/login', (req, res) => {
-  //   // Get the username and password from the form data (sent by the frontend)
-  //   const username = req.body.username;
-  //   const password = req.body.password;
-  
-  //   // Check if the username and password match the predefined values
-  //   if (username === predefinedUsername && password === predefinedPassword) {
-  //     // Generate a JWT token with user information and send it as a response
-  //     const token = jwt.sign({ user: { username: username, role: 'admin' } }, secretKey, {
-  //       expiresIn: '1h' // Token will expire in 1 hour
-  //     });
-  
-  //     res.send({ success: true, token });
-  //   } else {
-  //     // Send an error response
-  //     res.status(401).send({ success: false, message: 'Invalid username or password' });
-  //   }
-  // });
+
+  // Create a Nodemailer transporter
+const transporter = nodemailer.createTransport({
+  service: 'Gmail', // Replace with your email service provider
+  secure: true,
+  auth: {
+    user: 'shyamdwivedi595@gmail.com', // Replace with your email address
+    pass: 'qzabnvdflorxlebk' // Replace with your email password
+  }
+});
+
+// Define a route to handle incoming email messages
+app.post('/receive-email', (req, res) => {
+  const { name, email, phone, message} = req.body;
+  Newmessage = `${email} - ${message}`
+  const subject = 'message from the customer'
+  // Create an email message
+  const mailOptions = {
+    email,
+    to: 'shyamdwivedi595@gmail.com', // Replace with your email address
+    subject,
+    text: Newmessage
+  };
+
+  // Send the email
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error('Error sending email:', error);
+      res.status(500).send('Error sending email');
+    } else {
+      console.log('Email sent:', info.response);
+      res.send('Email sent successfully');
+    }
+  });
+});
 
 
   app.post('/login', async (req, res) => {

@@ -2,6 +2,10 @@ section{
     padding: 15px 0px;
 }
 
+body{
+    background-image: url(../images/bg.png);
+}
+
 .title1{
     font-size: 30px !important;
     font-weight: 600 !important;
@@ -34,3 +38,34 @@ section{
     color: antiquewhite;
     background-color: blueviolet;
 }
+
+.product_read a{
+    padding: 7px 14px;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: antiquewhite;
+    /* background-color: blueviolet; */
+}
+
+.titlehr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2px;
+    width: 60px;
+    margin: 0 auto;
+    border: none;
+    background-color: #30CFD0;
+}
+
+hr{
+    height: 2px;
+    width: 70px;
+    border: none;
+    background-color: #30CFD0;
+    margin: 0;
+}
+
