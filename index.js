@@ -62,7 +62,7 @@ const authenticateToken = (req, res, next) => {
 };
 
 const upload = multer({
-  limits: { fieldSize: 2 * 1024 * 1024 },
+  limits: { fieldSize: 2 * 1024 * 1024 }
 });
 
 // Handle form submission
@@ -71,17 +71,17 @@ app.post("/upload", upload.single("image"), async (req, res) => {
   const textData = req.body.textData;
   // console.log(req.body.image, "body");
   const imageBuffer = req.body.image; // Get the image buffer directly
-  // const base64Image = imageBuffer.toString("base64"); // Convert buffer to base64
+  const base64Image = imageBuffer.toString("base64"); // Convert buffer to base64
 
   const dbimage = await Message.find({}).exec();
 
   if (dbimage.length > 0) {
     await Message.deleteMany({});
-    await Message.create({ textData: textData, imageUrl: imageBuffer });
+    await Message.create({ textData: textData, imageUrl: base64Image });
     const reply = { submitted: true };
     res.json(reply); // Send a response with JSON
   } else {
-    await Message.create({ textData: textData, imageUrl: imageBuffer });
+    await Message.create({ textData: textData, imageUrl: base64Image });
     res.json({ submitted: true }); // Send a response with JSON
   }
 });
