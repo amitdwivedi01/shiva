@@ -61,7 +61,9 @@ const authenticateToken = (req, res, next) => {
   }
 };
 
-const upload = multer();
+const upload = multer({
+  limits: { fieldSize: 2 * 1024 * 1024 },
+});
 
 // Handle form submission
 
