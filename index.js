@@ -61,7 +61,7 @@ const authenticateToken = (req, res, next) => {
 };
   
 const upload = multer({
-    dest: "./uploads/",
+    dest: "./tmp/",
     filename: function (req, file, cb) {
       cb(
         null,
@@ -74,7 +74,7 @@ const upload = multer({
 app.post('/upload', upload.single('image'), async(req, res) => {
   const textData = req.body.textData;
   const imageFile = req.file;
-  const imageUrl = path.join(__dirname, "uploads", req.file.filename);
+  const imageUrl = path.join(__dirname, "tmp", req.file.filename);
 
   const dbimage = await Message.find({}).exec();
   console.log(dbimage, "hekjlkgjfkg")
