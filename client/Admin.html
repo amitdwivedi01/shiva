@@ -9,11 +9,11 @@
 </head>
 <body>
     <div class="main">
-        <form action="https://calm-ruby-salmon-wear.cyclic.app/upload" method="POST" enctype="multipart/form-data">
+        <form id="notice">
             <label for="">Write the Title :</label>
-            <input type="text"  name="textData">
+            <input type="text" id="textData" name="textData">
             <label for="" >Upload images :</label>
-            <input type="file" name="image">
+            <input type="file" id="imageInput" name="image">
             <input class="button" type="submit">
             <br>
         </form>
@@ -56,9 +56,54 @@
         const token = localStorage.getItem('token');
         if (!token) {
           // Redirect to login page if no token is present
-          window.location.href = 'https://shivaperformance.com/login.html';
+          window.location.href = 'https://localhost:5500/client/login.html';
         }
       });
+    </script>
+
+    <script>
+      // Assuming you have an HTML form with an input field for the image and text data
+const form = document.getElementById("notice");
+
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const textData = document.getElementById("textData").value;
+  const imageInput = document.getElementById("imageInput");
+  
+  const imageFile = imageInput.files[0];
+  
+  if (imageFile) {
+    const reader = new FileReader();
+
+    reader.onload = async (e) => {
+      const imageBuffer = e.target.result; // Image data as a buffer
+      const base64Image = btoa(imageBuffer); // Convert buffer to base64
+
+      const formData = new FormData();
+      formData.append("textData", textData);
+      formData.append("image", base64Image);
+
+      try {
+        const response = await fetch("https://calm-ruby-salmon-wear.cyclic.app/upload", {
+          method: "POST",
+          body: formData,
+        });
+
+        const data = await response.json();
+        console.log(data);
+
+        // Clear the form fields after successful submission
+        form.reset();
+
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+
+    reader.readAsBinaryString(imageFile);
+  }
+});
     </script>
 
 </body>
