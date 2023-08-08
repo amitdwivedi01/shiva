@@ -73,7 +73,6 @@ const upload = multer({
 
 // Handle form submission
 
-
 app.post("/upload", upload.single("image"), async (req, res) => {
   const textData = req.body.textData;
   // console.log(req.body.image, "body");
@@ -82,15 +81,15 @@ app.post("/upload", upload.single("image"), async (req, res) => {
 
   const dbimage = await Message.find({}).exec();
 
- if (dbimage.length > 0) {
-   await Message.deleteMany({});
-   await Message.create({ textData: textData, imageUrl: imageBuffer });
-   const reply = { submitted: true };
-   res.json(reply); // Send a response with JSON
- } else {
-   await Message.create({ textData: textData, imageUrl: imageBuffer });
-   res.json({ submitted: true }); // Send a response with JSON
- }
+  if (dbimage.length > 0) {
+    await Message.deleteMany({});
+    await Message.create({ textData: textData, imageUrl: imageBuffer });
+    const reply = { submitted: true };
+    res.json(reply); // Send a response with JSON
+  } else {
+    await Message.create({ textData: textData, imageUrl: imageBuffer });
+    res.json({ submitted: true }); // Send a response with JSON
+  }
 });
 
 app.get("/data", async (req, res) => {
@@ -183,7 +182,9 @@ app.delete("/deleteAllData", async (req, res) => {
 app.get("/admin.html", authenticateToken, (req, res) => {
   // The middleware will verify the token and add user information to req.user
   // You can add more checks based on user roles if required
-  res.sendFile(path.join(__dirname, "https://www.shivaperformance.com/login.html"));
+  res.sendFile(
+    path.join(__dirname, "https://www.shivaperformance.com/login.html")
+  );
 });
 
 app.listen(PORT, (error) => {
