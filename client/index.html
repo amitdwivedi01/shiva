@@ -53,7 +53,6 @@
                     .then(data => {
                         toggleModalVisibility(data);
                         const image = data.img;
-                        console.log(image, 'jkfkjggdfgd')
                         const modalImage = document.getElementById('modalImage');
                         const title = document.querySelector(".modalTitle")
                         title.textContent = data.message
