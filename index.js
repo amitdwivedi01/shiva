@@ -61,15 +61,7 @@ const authenticateToken = (req, res, next) => {
   }
 };
 
-const upload = multer({
-  dest: "./tmp/",
-  filename: function (req, file, cb) {
-    cb(
-      null,
-      file.originalname + "_" + Date.now() + path.extname(file.originalname)
-    );
-  },
-});
+const upload = multer();
 
 // Handle form submission
 

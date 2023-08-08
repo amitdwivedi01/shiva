@@ -1,1 +1,9 @@
-asdfsd
+{
+  dest: "./tmp/",
+  filename: function (req, file, cb) {
+    cb(
+      null,
+      file.originalname + "_" + Date.now() + path.extname(file.originalname)
+    );
+  },
+}
