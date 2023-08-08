@@ -38,7 +38,7 @@
 
     try {
       // Send the login credentials to the backend
-      const response = await fetch('http://localhost:3000/login', {
+      const response = await fetch('https://calm-ruby-salmon-wear.cyclic.app/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -51,7 +51,7 @@
         // Save the token to local storage upon successful login
         localStorage.setItem('token', data.token);
         // Redirect to the admin page
-        window.location.href = 'http://localhost:5500/admin.html';
+        window.location.href = 'https://calm-ruby-salmon-wear.cyclic.app/admin.html';
       } else {
         // Handle login failure (e.g., display an error message)
         alert('Invalid username or password');
