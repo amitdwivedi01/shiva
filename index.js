@@ -95,7 +95,9 @@ app.get("/data", async (req, res) => {
       const data = { message: "empty", img: "empty" };
       res.json(data);
     } else {
-      const data = { message: message[0].textData, img: message[0].imageUrl };
+      let data = { message: message[0].textData, img: message[0].imageUrl };
+      const response = data.img.toString("base64");
+      data.img = response;
       res.json(data);
     }
   } catch (error) {
