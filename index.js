@@ -182,7 +182,7 @@ app.post('/receive-email', (req, res) => {
   app.get('/admin.html', authenticateToken, (req, res) => {
     // The middleware will verify the token and add user information to req.user
     // You can add more checks based on user roles if required
-    res.sendFile(path.join(__dirname, 'https://www.shivaperformance.com/login.html'));
+    res.sendFile(path.join(__dirname, 'https://shivaperformance.com/login.html'));
   });
   
 app.listen(PORT, (error) =>{
