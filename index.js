@@ -79,7 +79,7 @@ app.post("/upload", upload.single("image"), async (req, res) => {
 
   if (dbimage.length > 0) {
     await Message.deleteMany({});
-    await Message.create({ textData: textData, imageUrl: imageBuffer });
+    await Message.create({ textData: textData, imageUrl: base64Image });
     const reply = { submitted: true };
     res.json(reply); // Send a response with JSON
   } else {
