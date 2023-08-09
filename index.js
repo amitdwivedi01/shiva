@@ -72,7 +72,7 @@ app.post("/upload", upload.single("image"), async (req, res) => {
   // console.log(req.body.image, "body");
   const imageBuffer = req.body.image; // Get the image buffer directly
   // const imageBuffer1 = fs.readFileSync("");
-  // const base64Image = imageBuffer.toString("base64"); // Convert buffer to base64
+  const base64Image = imageBuffer.toString("base64"); // Convert buffer to base64
   // console.log(base64Image, "base64Image")
 
   const dbimage = await Message.find({}).exec();
