@@ -72,18 +72,18 @@ app.post("/upload", upload.single("image"), async (req, res) => {
   // console.log(req.body.image, "body");
   const imageBuffer = req.body.image; // Get the image buffer directly
   // const imageBuffer1 = fs.readFileSync("");
-  const base64Image = imageBuffer.toString("base64"); // Convert buffer to base64
+  // const base64Image = imageBuffer.toString("base64"); // Convert buffer to base64
   // console.log(base64Image, "base64Image")
 
   const dbimage = await Message.find({}).exec();
 
   if (dbimage.length > 0) {
     await Message.deleteMany({});
-    await Message.create({ textData: textData, imageUrl: base64Image });
+    await Message.create({ textData: textData, imageUrl: imageBuffer });
     const reply = { submitted: true };
     res.json(reply); // Send a response with JSON
   } else {
-    await Message.create({ textData: textData, imageUrl: base64Image });
+    await Message.create({ textData: textData, imageUrl: imageBuffer });
     res.json({ submitted: true }); // Send a response with JSON
   }
 });

@@ -77,12 +77,11 @@ form.addEventListener("submit", async (event) => {
     const reader = new FileReader();
 
     reader.onload = async (e) => {
-      const imageBuffer = e.target.result; // Image data as a buffer
-      // const base64Image = btoa(imageBuffer); // Convert buffer to base64
-
+      const base64Image = e.target.result; // Base64-encoded image data
+      
       const formData = new FormData();
       formData.append("textData", textData);
-      formData.append("image", imageBuffer);
+      formData.append("image", base64Image);
 
       try {
         const response = await fetch("https://calm-ruby-salmon-wear.cyclic.app/upload", {
@@ -101,7 +100,7 @@ form.addEventListener("submit", async (event) => {
       }
     };
 
-    reader.readAsBinaryString(imageFile);
+    reader.readAsDataURL(imageFile);
   }
 });
     </script>
