@@ -56,7 +56,7 @@
                         const modalImage = document.getElementById('modalImage');
                         const title = document.querySelector(".modalTitle")
                         title.textContent = data.message
-                        modalImage.src = `data:image/png;base64,${image}`;
+                        modalImage.src = `${image}`;
                     })
                     .catch(error => {
                         console.error('Error fetching data:', error);

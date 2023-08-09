@@ -110,8 +110,8 @@ const transporter = nodemailer.createTransport({
   service: "Gmail", // Replace with your email service provider
   secure: true,
   auth: {
-    user: "shyamdwivedi595@gmail.com", // Replace with your email address
-    pass: "qzabnvdflorxlebk", // Replace with your email password
+    user: "shwetal.sakaria@shivaperformance.com", // Replace with your email address
+    pass: "frzjozucmqbpwuzc", // Replace with your email password
   },
 });
 
@@ -123,7 +123,7 @@ app.post("/receive-email", (req, res) => {
   // Create an email message
   const mailOptions = {
     email,
-    to: "shyamdwivedi595@gmail.com", // Replace with your email address
+    to: "shwetal.sakaria@shivaperformance.com", // Replace with your email address
     subject,
     text: Newmessage,
   };
