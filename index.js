@@ -8,11 +8,16 @@ const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const secretKey = "your_secret_key_shiva_industries";
 const nodemailer = require("nodemailer");
+const Env = require('dotenv').config();
+
+const password = process.env.password
+
+const DB = process.env.DB_HOST
 
 const app = express();
 const PORT = 3000;
 const url =
-  "mongodb+srv://amit:amit123@cluster0.sampghv.mongodb.net/?retryWrites=true&w=majority";
+  `${DB}`;
 
 const corsOptions = {
   origin: "*",
@@ -111,7 +116,7 @@ const transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: "shwetal.sakaria@shivaperformance.com", // Replace with your email address
-    pass: "frzjozucmqbpwuzc", // Replace with your email password
+    pass: password // Replace with your email password
   },
 });
 
