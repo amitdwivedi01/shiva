@@ -113,7 +113,6 @@ app.get("/data", async (req, res) => {
 // Create a Nodemailer transporter
 const transporter = nodemailer.createTransport({
   service: "Gmail", // Replace with your email service provider
-  secure: true,
   auth: {
     user: "marketing@shivaperformance.com", // Replace with your email address
     pass: password // Replace with your email password
