@@ -126,7 +126,8 @@ app.post("/receive-email", (req, res) => {
   const subject = "message from the customer";
   // Create an email message
   const mailOptions = {
-    email,
+    from: 'marketing@shivaperformance.com',
+    // email,
     to: "marketing@shivaperformance.com", // Replace with your email address
     subject,
     text: Newmessage,
