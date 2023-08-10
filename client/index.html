@@ -1,291 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Basic Page Needs -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="Shiva - performance & Materials">
-        <meta name="author" content="Svayambhu tech">
 
-        <!-- Page Title -->
-        <title> Shiva Performance Materials </title>
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Shiva - performance & Materials">
+    <meta name="author" content="Svayambhu tech">
 
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" href="images/Favicon.png">   
+    <!-- Page Title -->
+    <title> Shiva Performance Materials </title>
 
-        <!-- Mobile Specific Metas -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/Favicon.png">
 
-        <!-- Bootstrap core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Font Awesome CSS -->
-        <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"> -->
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-
-        <!-- Flex Slider -->
-        <link rel="stylesheet" href="css/flexslider.css">
-
-        <!-- Owl Carousel -->
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.min.css">
-
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
-
-        <!-- Custom styles for this template -->
-        <link href="css/style.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        <script>
-
-            const toggleModalVisibility = (data) => {
-                const modalSection = document.querySelector('.modalSection');
-                if (data.message == 'empty') {
-                    modalSection.style.display = 'none'; // Show the modal
-                } else {
-                    modalSection.style.display = 'block'; // Hide the modal
-                    disableScroll()
-                }
-            };
-            document.addEventListener("DOMContentLoaded", function () {
-                fetch('https://calm-ruby-salmon-wear.cyclic.app/data')
-                    .then(response => response.json())
-                    .then(data => {
-                        toggleModalVisibility(data);
-                        const image = data.img;
-                        const modalImage = document.getElementById('modalImage');
-                        const title = document.querySelector(".modalTitle")
-                        title.textContent = data.message
-                        modalImage.src = `${image}`;
-                    })
-                    .catch(error => {
-                        console.error('Error fetching data:', error);
-                    });
-            })
-        </script>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"> -->
 
 
-    </head>
+    <!-- Flex Slider -->
+    <link rel="stylesheet" href="css/flexslider.css">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.min.css">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script>
+
+        const toggleModalVisibility = (data) => {
+            const modalSection = document.querySelector('.modalSection');
+            if (data.message == 'empty') {
+                modalSection.style.display = 'none'; // Show the modal
+            } else {
+                modalSection.style.display = 'block'; // Hide the modal
+                disableScroll()
+            }
+        };
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('https://calm-ruby-salmon-wear.cyclic.app/data')
+                .then(response => response.json())
+                .then(data => {
+                    toggleModalVisibility(data);
+                    const image = data.img;
+                    const modalImage = document.getElementById('modalImage');
+                    const title = document.querySelector(".modalTitle")
+                    title.textContent = data.message
+                    modalImage.src = `${image}`;
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        })
+    </script>
+
+
+</head>
 
 
 
-    <body class="homepage">
+<body class="homepage">
 
-        <!-- Preloader -->
-        <div class="loader-wrapper">
-            <div class="sk-cube-grid">
-                <div class="sk-cube sk-cube1"></div>
-                <div class="sk-cube sk-cube2"></div>
-                <div class="sk-cube sk-cube3"></div>
-                <div class="sk-cube sk-cube4"></div>
-                <div class="sk-cube sk-cube5"></div>
-                <div class="sk-cube sk-cube6"></div>
-                <div class="sk-cube sk-cube7"></div>
-                <div class="sk-cube sk-cube8"></div>
-                <div class="sk-cube sk-cube9"></div>
-            </div>
+    <!-- Preloader -->
+    <div class="loader-wrapper">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
         </div>
+    </div>
 
-        <section class="modalSection">
-            <div class="modall">
-                <h1 class="modalTitle"></h1>
-                <img id="modalImage" src= '' alt="" width="100">
-                <button class="close2" >Close</button>
-            </div>
-           </section>
+    <section class="modalSection">
+        <div class="modall">
+            <h1 class="modalTitle"></h1>
+            <img id="modalImage" src='' alt="" width="100">
+            <button class="close2">Close</button>
+        </div>
+    </section>
 
-        <!-- Page Wrapper -->
-        <div class="wrapper">
+    <!-- Page Wrapper -->
+    <div class="wrapper">
 
-            <!-- Header Section -->
-            <header>
-                <div class="header-area">
+        <!-- Header Section -->
+        <header>
+            <div class="header-area">
 
 
-                    <div class="row logo-top-info">
-                        <div class="container">
-                            <div class="col-md-3 logo">
-                                <a href="index.html"><img src="images/logo.png" alt="Offshore Logo" /></a>
-                                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                                    data-target="#navbar">
-                                    <span class="sr-only"> Main Menu </span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-                            <div class="col-md-9 top-info-social">
-                                <div class="pull-right">
-                                    <div class="top-info">
-                                        <div class="call">
-                                            <h3> CALL US </h3>
-                                            <p> +91-265-2321418 / 2335432 </p>
-                                        </div>
-                                        <div class="email">
-                                            <h3> EMAIL US </h3>
-                                            <p> marketing@shivaperformance.com </p>
-                                        </div>
+                <div class="row logo-top-info">
+                    <div class="container">
+                        <div class="col-md-3 logo">
+                            <a href="index.html"><img src="images/logo.png" alt="Offshore Logo" /></a>
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                                <span class="sr-only"> Main Menu </span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="col-md-9 top-info-social">
+                            <div class="pull-right">
+                                <div class="top-info">
+                                    <div class="call">
+                                        <h3> CALL US </h3>
+                                        <p> +91-265-2321418 / 2335432 </p>
                                     </div>
-                                    <div class="social">
-                                        <ul class="social-icons">
-                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                            <li><a href="https://www.youtube.com/@shivaperformancematerials4748" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                                            <li><a href="https://www.linkedin.com/in/shiva-performance-materials-vadodara-india-2914ab247?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BUJxXR%2B%2FAT423LogBohDJfg%3D%3D" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                        </ul>
+                                    <div class="email">
+                                        <h3> EMAIL US </h3>
+                                        <p> marketing@shivaperformance.com </p>
                                     </div>
+                                </div>
+                                <div class="social">
+                                    <ul class="social-icons">
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.youtube.com/@shivaperformancematerials4748"
+                                                target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li><a href="https://www.linkedin.com/in/shiva-performance-materials-vadodara-india-2914ab247?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BUJxXR%2B%2FAT423LogBohDJfg%3D%3D"
+                                                target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <nav id="navbar" class="collapse navbar-collapse main-menu">
-                        <div class="container stroke">
-                            <ul class="main-menu">
-                                <li class="active"> <a class="nav-link" href="index.html"> Home </a></li>
-                                <li> <a href="about.html"> About Us </a> </li>
-                                <li> <a href="product.html"> Products </a> </li>
-                                <li><a href="https://www.inkworldmagazine.com" target="_blank"> News &amp; Media </a> </li>
-                                <!-- <li><a href="#"> News &amp; Media </a> </li> -->
-                                <li><a href="contact.html"> Contact </a> </li>
-                            </ul>
-                        </div>
-                    </nav>
                 </div>
-            </header>
-            <!-- Header Section -->
-
-            <!-- Main Content Section -->
-            <main class="main">
-
-
-
-                <section class="home-slider">
-                    <div class="flexslider">
-                        <ul class="slides">
-                            <li class="has-overlay">
-                                <!-- <div style="background-image: url('images//slider2 (2).png');"></div> -->
-                                <img src="images//slider2 (2).png" alt="Slider 1" />
-                                <div class="slider-content">
-                                    <div class="container" data-aos="fade-up">
-                                        <h1 class="htext"> Welcome to Shiva <br> Performance Materials </h1>
-                                        <p>Fuel Your Performance Journey with Shiva Performance.</p>
-
-                                        <a class="btn btn-primary"> KNOW MORE <i class="fa fa-angle-right"></i> </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="has-overlay">
-                                <img src="images/slider1.png" alt="Slider 2" />
-                                <div class="slider-content text-center">
-                                    <div class="container" data-aos="fade-up" data-aos-duration="3000">
-
-                                        <h2>We Create Products With Better Technology</h2>
-                                        <p> Building Next-Generation Products with Unmatched Technological Expertise.
-                                            <br> Pushing Boundaries, Crafting Superior Solutions with Advanced Tech.
-                                        </p>
-                                        <a class="btn btn-primary"> Contact us <i class="fa fa-angle-right"></i> </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="has-overlay">
-                                <img src="images/slider1 1 (1).png" alt="Slider 1" />
-                                <div class="slider-content">
-                                    <div class="container" data-aos="fade-up">
-                                        <h1 class="htext"> Welcome to Shiva <br> Performance Materials </h1>
-                                        <p>Fuel Your Performance Journey with Shiva Performance.</p>
-
-                                        <a class="btn btn-primary"> KNOW MORE <i class="fa fa-angle-right"></i> </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="has-overlay">
-                                <img src="images/slider1 1 (3).png" alt="Slider 2" />
-                                <div class="slider-content text-center">
-                                    <div class="container" data-aos="fade-up" data-aos-duration="3000">
-
-                                        <h2>We Create Products With Better Technology</h2>
-                                        <p> Building Next-Generation Products with Unmatched Technological Expertise.
-                                            <br> Pushing Boundaries, Crafting Superior Solutions with Advanced Tech.
-                                        </p>
-                                        <a class="btn btn-primary"> Contact us <i class="fa fa-angle-right"></i> </a>
-                                    </div>
-                                </div>
-                            </li>
+                <nav id="navbar" class="collapse navbar-collapse main-menu">
+                    <div class="container stroke">
+                        <ul class="main-menu">
+                            <li class="active"> <a class="nav-link" href="index.html"> Home </a></li>
+                            <li> <a href="about.html"> About Us </a> </li>
+                            <li> <a href="product.html"> Products </a> </li>
+                            <li><a href="https://www.inkworldmagazine.com" target="_blank"> News &amp; Media </a> </li>
+                            <!-- <li><a href="#"> News &amp; Media </a> </li> -->
+                            <li><a href="contact.html"> Contact </a> </li>
                         </ul>
                     </div>
-                </section>
+                </nav>
+            </div>
+        </header>
+        <!-- Header Section -->
 
-                <section class="home-company" data-aos="fade-up" data-aos-duration="1500">
-                    <div class="container">
-                        <div class="row company">
-                            <div class="col-md-5 col-sm-8">
-                                <div class="company-details">
-                                    <h2 class="company-title color-title"> THE COMPANY </h2>
-                                    <h4 class="company-subtitle subtitle text-gradient" > INTERACTIVELY EMPOWER DIVERSE IMPERATIVES AFTER PROSPECTIVE CONVERGENCE.</h4>
-                                    <p> Build strong and efficient collaborations with customers to deliver exceptional
-                                        products. Continuously improve our processes to drive positive change and
-                                        provide
-                                        value that aligns with customer needs. Forge powerful partnerships with
-                                        customers,
-                                        enabling streamlined supply chains and efficient outcomes.</p>
-                                    <a href="about.html" class="btn btn-primary" role="button"> KNOW MORE</a>
+        <!-- Main Content Section -->
+        <main class="main">
+
+
+
+            <section class="home-slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li class="has-overlay">
+                            <!-- <div style="background-image: url('images//slider2 (2).png');"></div> -->
+                            <img src="images//slider2 (2).png" alt="Slider 1" />
+                            <div class="slider-content">
+                                <div class="container" data-aos="fade-up">
+                                    <h1 class="htext"> Welcome to Shiva <br> Performance Materials </h1>
+                                    <p>Fuel Your Performance Journey with Shiva Performance.</p>
+
+                                    <a class="btn btn-primary"> KNOW MORE <i class="fa fa-angle-right"></i> </a>
                                 </div>
                             </div>
+                        </li>
+                        <li class="has-overlay">
+                            <img src="images/slider1.png" alt="Slider 2" />
+                            <div class="slider-content text-center">
+                                <div class="container" data-aos="fade-up" data-aos-duration="3000">
 
-                            <div class="col-md-7 col-sm-12">
-                                <div class="company-image">
-                                    <div class="img-left hover-effect">
-                                        <img src="/images/DJI_0127.JPG" alt="">
-                                    </div>
-                                    <div class="img-right hover-effect">
-                                        <img src="/images/DJI_0028 Edit.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="home-ceo">
-                    <div class="container">
-                        <div class="row ceo">
-                            <div class="col-md-6" data-aos="fade-up">
-                                <div class="ceo-photo">
-                                    <img src="images/DJI_0148 Edit.png" alt="CEO" />
-                                </div>
-                            </div>
-
-                            <div class="col-md-6" data-aos="fade-up" data-aos-duration="1500">
-                                <div class="ceo-details">
-                                    <h2 class="ceo-title color-title"> WORD FROM CEO </h2>
-                                    <h4 class="ceo-subtitle subtitle text-gradient"> READ THE MESSAGE FROM OUR CEO </h4>
-                                    <p> Proactively incubate enterprise total linkage without sustainable leadership
-                                        skills.
-                                        Monotonectally strategize user-centric interfaces whereas low-risk high-yield
-                                        materials. Efficiently syndicate web-enabled portals for principle centered
-                                        partnerships.
+                                    <h2>We Create Products With Better Technology</h2>
+                                    <p> Building Next-Generation Products with Unmatched Technological Expertise.
+                                        <br> Pushing Boundaries, Crafting Superior Solutions with Advanced Tech.
                                     </p>
-                                    <p>Proactively whiteboard revolutionary processes after scalable testing procedures.
-                                        Holisticly reinvent seamless after business.</p>
-                                    <!-- <h4 class="ceo-sign"> <img src="images/ceo-sign.png" alt="signature" /> </h4> -->
-                                    <p class="ceo-name">Rahul Agrawal, CEO</p>
+                                    <a class="btn btn-primary"> Contact us <i class="fa fa-angle-right"></i> </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="has-overlay">
+                            <img src="images/slider1 1 (1).png" alt="Slider 1" />
+                            <div class="slider-content">
+                                <div class="container" data-aos="fade-up">
+                                    <h1 class="htext"> Welcome to Shiva <br> Performance Materials </h1>
+                                    <p>Fuel Your Performance Journey with Shiva Performance.</p>
+
+                                    <a class="btn btn-primary"> KNOW MORE <i class="fa fa-angle-right"></i> </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="has-overlay">
+                            <img src="images/slider1 1 (3).png" alt="Slider 2" />
+                            <div class="slider-content text-center">
+                                <div class="container" data-aos="fade-up" data-aos-duration="3000">
+
+                                    <h2>We Create Products With Better Technology</h2>
+                                    <p> Building Next-Generation Products with Unmatched Technological Expertise.
+                                        <br> Pushing Boundaries, Crafting Superior Solutions with Advanced Tech.
+                                    </p>
+                                    <a class="btn btn-primary"> Contact us <i class="fa fa-angle-right"></i> </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="home-company" data-aos="fade-up" data-aos-duration="1500">
+                <div class="container">
+                    <div class="row company">
+                        <div class="col-md-5 col-sm-8">
+                            <div class="company-details">
+                                <h2 class="company-title color-title"> THE COMPANY </h2>
+                                <h4 class="company-subtitle subtitle text-gradient"> INTERACTIVELY EMPOWER DIVERSE
+                                    IMPERATIVES AFTER PROSPECTIVE CONVERGENCE.</h4>
+                                <p> Build strong and efficient collaborations with customers to deliver exceptional
+                                    products. Continuously improve our processes to drive positive change and
+                                    provide
+                                    value that aligns with customer needs. Forge powerful partnerships with
+                                    customers,
+                                    enabling streamlined supply chains and efficient outcomes.</p>
+                                <a href="about.html" class="btn btn-primary" role="button"> KNOW MORE</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-7 col-sm-12">
+                            <div class="company-image">
+                                <div class="img-left hover-effect">
+                                    <img src="/images/DJI_0127.JPG" alt="">
+                                </div>
+                                <div class="img-right hover-effect">
+                                    <img src="/images/DJI_0028 Edit.png" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-                <div class="titleclass">
-                    <h2 class="text-gradient group-company" id="tileid" style="font-size: 40px; font-weight: bold; text-align: center;">Group of Companies</h2>
-                    <hr>
                 </div>
-                <section style="padding: 15px 0;" class="home-services">
-                    <div class="container">
-                        <div class="row services">
-                            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1500">
-                                <div class="hover-effect">
-                                    <img src="images/Shiva-Pharmachem-1-345x189.png" alt="technology-innovation" />
-                                </div>
+            </section>
+
+            <section class="home-ceo">
+                <div class="container">
+                    <div class="row ceo">
+                        <div class="col-md-6" data-aos="fade-up">
+                            <div class="ceo-photo">
+                                <img src="images/DJI_0148 Edit.png" alt="CEO" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="ceo-details">
+                                <h2 class="ceo-title color-title"> WORD FROM CEO </h2>
+                                <h4 class="ceo-subtitle subtitle text-gradient"> READ THE MESSAGE FROM OUR CEO </h4>
+                                <p> Proactively incubate enterprise total linkage without sustainable leadership
+                                    skills.
+                                    Monotonectally strategize user-centric interfaces whereas low-risk high-yield
+                                    materials. Efficiently syndicate web-enabled portals for principle centered
+                                    partnerships.
+                                </p>
+                                <p>Proactively whiteboard revolutionary processes after scalable testing procedures.
+                                    Holisticly reinvent seamless after business.</p>
+                                <!-- <h4 class="ceo-sign"> <img src="images/ceo-sign.png" alt="signature" /> </h4> -->
+                                <p class="ceo-name">Rahul Agrawal, CEO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="titleclass">
+                <h2 class="text-gradient group-company" id="tileid"
+                    style="font-size: 40px; font-weight: bold; text-align: center;">Group of Companies</h2>
+                <hr>
+            </div>
+            <section style="padding: 15px 0;" class="home-services">
+                <div class="container">
+                    <div class="row services">
+                        <div class="col-md-6 service-container" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="hover-effect serviceimg">
+                                <img src="images/Shiva-Pharmachem-1-345x189.png" alt="technology-innovation" />
+                            </div>
+                            <div style="width: 75%;">
                                 <h4 class="services-title-one subtitle text-gradient">SHIVA PHARMACHEM LIMITED</h4>
-                                <hr>
+                            </div>
+                            <hr>
+                            <div class="service__text">
                                 <p>Shiva Pharmachem Limited, which is involved in chlorination chemistry and is
                                     manufacturing intermediates for the pharmaceutical, agrochemical and polymer
                                     industry.
@@ -296,30 +305,26 @@
                                     intermediates serve as essential building blocks for the synthesis of pharmaceutical
                                     compounds, agrochemical formulations, and polymer additives.</p>
                             </div>
-                            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1500">
-                                <div class="hover-effect">
-                                    <img src="images/Shiva engineering services.png" alt="our-operations" />
-                                </div>
-                                <h4 class="services-title-one subtitle text-gradient">SHIVA ENGINEERING SERVICES</h4>
-                                <hr>
-                                <p>Shiva Engineering Services (SES) is one of the leading providers of process plant
-                                    engineering and construction services. This wide spectrum of services includes
-                                    planning,
-                                    design & engineering, procurement, construction & execution as well as industrial
-                                    services and consulting. Our experience comes from serving a broad range of reputed
-                                    and
-                                    industry leading manufacturers and multi-national around the globe across multiple
-                                    markets. </p>
-                                <p>
-                                    SES engages with customers right from concept till start-up of a project with
-                                    comprehensive involvement and support under one roof, whether the project is large
-                                    or
-                                    small, greenfield or brown-field, re-vamp or modification. SES brings on the table
-                                    its
-                                    full-service capabilities on each project engagement
-                                </p>
+                        </div>
+                        <div class="col-md-6 service-container" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="hover-effect serviceimg">
+                                <img src="images/syntrenix.png" alt="our-operations" />
                             </div>
-                            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1500">
+                            <div style="width: 75%;">
+                                <h4 class="services-title-one subtitle text-gradient">STYRENIX PERFORMANCE MATERIALS</h4>
+                            </div>
+                            <hr>
+                            <div class="service__text">
+
+                                <p>STYRENIX PERFORMANCE MATERIALS LIMITED helps its customer succeed by offering innovative
+                                    and sustainable best in class solutions, design to give them a competive edge in their
+                                    markets. the company provides styrenic applications for many everyday products across a
+                                    broad range of industries, including automotive, electronic, household, construction,
+                                    healthcare, packaging and toys/sports/leisure.</p>
+                            </div>
+                            
+                        </div>
+                        <!-- <div class="col-md-4" data-aos="fade-up" data-aos-duration="1500">
                                 <div class="hover-effect">
                                     <img src="images/Shiva-Trade-Distribution-345x189.png" alt="social-resposibility" />
                                 </div>
@@ -335,266 +340,269 @@
                                     Styrene Monomer from SABIC Saudia Arabia. We have our own storage installation
                                     terminal
                                     at Kandla as well</p>
-                            </div>
+                            </div> -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="home-process" style="background-color: #f4f5f8;">
+                <div class="container">
+                    <div class="row process">
+                        <div class="col-sm-6 wecreate" data-aos="fade-up" data-aos-duration="1500">
+                            <h2 class="process-title title-2 text-gradient"> We Create Tomorrow.. </h2>
+                            <h4 class="process-subtitle subtitle-2"> Interactively empower diverse imperatives after
+                                prospective convergence. </h4>
+                            <p> At Shiva we create products with better technology that helps the printing and
+                                packaging
+                                industries and meet specific needs for ecologically friendly solutions without
+                                sacrificing functionality and performance.Our product portfolio compromises of
+                                resins,
+                                solutions and emulsions for specific printing and packaging applications.In
+                                addition, we
+                                also produce toner resins and styrene- maleic anhydridr resins. </p>
+                        </div>
+
+                        <div class="col-sm-6" data-aos="fade-up" data-aos-duration="1500">
+                            <iframe width="600" height="345"
+                                src="https://www.youtube.com/embed/qdd3oXzDlJo?autoplay=1&mute=1&loop=1&playlist=qdd3oXzDlJo"
+                                frameborder="0" allowfullscreen">
+                            </iframe>
                         </div>
                     </div>
-                </section>
-
-                <section class="home-process" style="background-color: #f4f5f8;">
-                    <div class="container">
-                        <div class="row process">
-                            <div class="col-sm-6 wecreate" data-aos="fade-up" data-aos-duration="1500">
-                                <h2 class="process-title title-2 text-gradient"> We Create Tomorrow.. </h2>
-                                <h4 class="process-subtitle subtitle-2"> Interactively empower diverse imperatives after
-                                    prospective convergence. </h4>
-                                <p> At Shiva we create products with better technology that helps the printing and
-                                    packaging
-                                    industries and meet specific needs for ecologically friendly solutions without
-                                    sacrificing functionality and performance.Our product portfolio compromises of
-                                    resins,
-                                    solutions and emulsions for specific printing and packaging applications.In
-                                    addition, we
-                                    also produce toner resins and styrene- maleic anhydridr resins. </p>
-                            </div>
-
-                            <div class="col-sm-6" data-aos="fade-up" data-aos-duration="1500">
-                                <iframe width="600" height="345"
-                                    src="https://www.youtube.com/embed/qdd3oXzDlJo?autoplay=1&mute=1&loop=1&playlist=qdd3oXzDlJo" frameborder="0" allowfullscreen">
-                                </iframe>
-                            </div>
-                        </div>
-                </section>
+            </section>
 
 
-                <section class="home-testimonials testi">
+            <section class="home-testimonials testi">
 
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6 col-lg-5 cardMain" data-aos="fade-up" data-aos-duration="1500">
-                                <div class="card" data-aos="fade-up" data-aos-duration="1500">
-                                    <div class="card-body">
-                                        <h2 class="card-title text-gradient">Our Strength</h2>
-                                        <hr>
-                                        <li>Stringent adherence to quality standards</li>
-                                        <li>Continuous improvement of the Quality Management System.</li>
-                                        <li>Ability to rapidly leverage capacities to manufacture new products.</li>
-                                        <li>Unique, innovative and highly systematized production technology.</li>
-                                        <li>Uncompromising commitment to upholding rigorous quality standards, ensuring
-                                            exceptional product excellence.</li>
-                                        <li>Swift adaptability to harness existing capabilities for efficient production
-                                            of
-                                            innovative, new product offerings.</li>
-                                        <li>Agile utilization of resources to swiftly respond to market demands,
-                                            enabling
-                                            rapid production of diverse product lines.</li>
-                                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-5 secondcard cardMain pl-3" data-aos="fade-up"
-                                data-aos-duration="1500">
-                                <div class="card effect5" data-aos="fade-up" data-aos-duration="1500">
-                                    <div class="card-body">
-                                        <h2 class="card-title text-gradient">Global Presence</h2>
-                                        <hr>
-                                        <p class="card-text">Shiva Performance, armed with extensive global expertise
-                                            and
-                                            technological advancements, is dedicated to meeting the demands of the world
-                                            market. Currently, our exports contribute to 80% of our total revenue,
-                                            reaching
-                                            countries across the globe. Our objective is to strengthen this export
-                                            performance by expanding our customer base worldwide and continuously
-                                            diversifying our product range. With a focus on excellence and customer
-                                            satisfaction, we aim to establish ourselves as a leading industry player,
-                                            delivering exceptional solutions on a global scale.</p> <br> <br> <br>
-                                    </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-5 cardMain" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="card" data-aos="fade-up" data-aos-duration="1500">
+                                <div class="card-body">
+                                    <h2 class="card-title text-gradient">Our Strength</h2>
+                                    <hr>
+                                    <li>Stringent adherence to quality standards</li>
+                                    <li>Continuous improvement of the Quality Management System.</li>
+                                    <li>Ability to rapidly leverage capacities to manufacture new products.</li>
+                                    <li>Unique, innovative and highly systematized production technology.</li>
+                                    <li>Uncompromising commitment to upholding rigorous quality standards, ensuring
+                                        exceptional product excellence.</li>
+                                    <li>Swift adaptability to harness existing capabilities for efficient production
+                                        of
+                                        innovative, new product offerings.</li>
+                                    <li>Agile utilization of resources to swiftly respond to market demands,
+                                        enabling
+                                        rapid production of diverse product lines.</li>
+                                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                                 </div>
                             </div>
                         </div>
-                    </div>
-        </div>
-
-        </section>
-
-        <section class="home-publications homenew">
-            <div class="container">
-                <div class="row publications" data-aos="fade-up" data-aos-duration="1500">
-                    <div class="col-md-7 col-sm-6">
-                        <div class="panel-group" id="accordion">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a class="text-gradient" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseOne">Environment &
-                                            Safety</a>
-                                    </h4>
-                                </div>
-                                <div id="collapseOne" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        <p>Shiva’s Plants and operational facilities: Have a good track records on
-                                            safety
-                                            and loss prevention / minimization. Have the necessary facilities to treat
-                                            liquid / solid waste and air emission that contain pollutants, in accordance
-                                            with the requirements of the Gujarat Pollution Control Board (“GPCB”). We
-                                            are
-                                            complying with rules and regulations of Indian Government on Health, Safety
-                                            and
-                                            Environment Protection.</p>
-                                        <p>We are certified by “DQS Certification India Pvt. Ltd.” with the following: o
-                                            ISO
-                                            9001:2008 (Quality Management System) o ISO 14001:2004 (Environmental
-                                            Management
-                                            System) o OHSAS 18001:2007 (Occupational Health and Safety Management
-                                            Systems)
-                                            Fire-fighting hand appliance are provided. Work procedures and safety
-                                            instructions provided. It is also found that following safeguards Personal
-                                            protective equipment are in place and in use. Medical support is available
-                                            to
-                                            attend to occupational health related problems and supervision of trained
-                                            first-aid providers.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a class="collapsed text-gradient" data-toggle="collapse" data-parent="#accordion"
-                                            href="#collapseTwo">International Trade </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseTwo" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <p>With rich global know-how and technological advancement, Shiva Performance is
-                                            continuously gearing itself to cater to the needs of the world market.
-                                            Currently, 80% of the total revenue comes from exports to countries all over
-                                            the
-                                            world. Now our target is to strengthen this export performance by enhancing
-                                            the
-                                            customer base worldwide and also by continuously increasing our product
-                                            basket.
-                                        </p>
-                                    </div>
+                        <div class="col-sm-6 col-lg-5 secondcard cardMain pl-3" data-aos="fade-up"
+                            data-aos-duration="1500">
+                            <div class="card effect5" data-aos="fade-up" data-aos-duration="1500">
+                                <div class="card-body">
+                                    <h2 class="card-title text-gradient">Global Presence</h2>
+                                    <hr>
+                                    <p class="card-text">Shiva Performance, armed with extensive global expertise
+                                        and
+                                        technological advancements, is dedicated to meeting the demands of the world
+                                        market. Currently, our exports contribute to 80% of our total revenue,
+                                        reaching
+                                        countries across the globe. Our objective is to strengthen this export
+                                        performance by expanding our customer base worldwide and continuously
+                                        diversifying our product range. With a focus on excellence and customer
+                                        satisfaction, we aim to establish ourselves as a leading industry player,
+                                        delivering exceptional solutions on a global scale.</p> <br> <br> <br>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+    </div>
 
-                    <div class="col-md-4 col-sm-6">
-                        <div class="plubication-downloads">
-                            <h3 class="text-gradient">Downloads</h3>
-                            <div class="download-brochure">
-                                <div>
-                                    <img class="brochure-img" src="/images/brochure (2) 1.png" alt="brochure">
-                                    <a href="/images/Shiva Final brochure 2023.pdf" download="brochure">
-                                        <p><img src="images/cloud-download.png" width="20">Download-pdf</p>
-                                    </a>
+    </section>
+
+    <section class="home-publications homenew">
+        <div class="container">
+            <div class="row publications" data-aos="fade-up" data-aos-duration="1500">
+                <div class="col-md-7 col-sm-6">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="text-gradient" data-toggle="collapse" data-parent="#accordion"
+                                        href="#collapseOne">Environment &
+                                        Safety</a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>Shiva’s Plants and operational facilities: Have a good track records on
+                                        safety
+                                        and loss prevention / minimization. Have the necessary facilities to treat
+                                        liquid / solid waste and air emission that contain pollutants, in accordance
+                                        with the requirements of the Gujarat Pollution Control Board (“GPCB”). We
+                                        are
+                                        complying with rules and regulations of Indian Government on Health, Safety
+                                        and
+                                        Environment Protection.</p>
+                                    <p>We are certified by “DQS Certification India Pvt. Ltd.” with the following: o
+                                        ISO
+                                        9001:2008 (Quality Management System) o ISO 14001:2004 (Environmental
+                                        Management
+                                        System) o OHSAS 18001:2007 (Occupational Health and Safety Management
+                                        Systems)
+                                        Fire-fighting hand appliance are provided. Work procedures and safety
+                                        instructions provided. It is also found that following safeguards Personal
+                                        protective equipment are in place and in use. Medical support is available
+                                        to
+                                        attend to occupational health related problems and supervision of trained
+                                        first-aid providers.</p>
                                 </div>
-                                <div>
-                                    <img class="brochure-img" src="/images/brochure new.png" alt="brochure">
-                                    <a href="/images/onefold brochure_compressed.pdf" download="EC1">
-                                        <p><img src="images/cloud-download.png" width="20">Download-pdf</p>
-                                    </a>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="collapsed text-gradient" data-toggle="collapse" data-parent="#accordion"
+                                        href="#collapseTwo">International Trade </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>With rich global know-how and technological advancement, Shiva Performance is
+                                        continuously gearing itself to cater to the needs of the world market.
+                                        Currently, 80% of the total revenue comes from exports to countries all over
+                                        the
+                                        world. Now our target is to strengthen this export performance by enhancing
+                                        the
+                                        customer base worldwide and also by continuously increasing our product
+                                        basket.
+                                    </p>
                                 </div>
-                                <!-- <div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="plubication-downloads">
+                        <h3 class="text-gradient">Downloads</h3>
+                        <div class="download-brochure">
+                            <div>
+                                <img class="brochure-img" src="/images/brochure (2) 1.png" alt="Shiva Performance Materials Brochure 2023">
+                                <a href="./images/Shiva Performance Materials Brochure 2023.pdf" download="Shiva Performance Materials Brochure 2023">
+                                    <p><img src="images/cloud-download.png" width="20">Download-pdf</p>
+                                </a>
+                            </div>
+                            <div>
+                                <img class="brochure-img" src="/images/brochure new.png" alt="brochure">
+                                <a href="./images/shiva onefold brochure.pdf" download="Shiva Performance Materials One fold Brochure">
+                                    <p><img src="images/cloud-download.png" width="20">Download-pdf</p>
+                                </a>
+                            </div>
+                            <!-- <div>
                                     <img class="brochure-img" src="/images/EC2.png" alt="brochure">
                                     <a href="/images/EC-Compliance-for-Period-of-1st-Oct-2020-to-31st-March-2021.pdf"
                                         download="EC2">
                                         <p><img src="images/cloud-download.png" width="20">Download-pdf</p>
                                     </a>
                                 </div> -->
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
 
-        </main>
-        <!-- Main Content Section -->
+    </main>
+    <!-- Main Content Section -->
 
-        <!-- Footer Section -->
-        <footer>
-            <div class="footer">
-                <div class="container">
-                    <!-- Prefooter Section -->
-                    <div class="row pre-footer" data-aos="fade-up">
-                        <div class="col-md-4">
-                            <div class="contact-box contactBox">
-                                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <div class="contact-details fotterContact">
-                                    <h4 class="pre-footer-title">CORPORATE OFFICE</h4>
-                                    <p>Shiva Performance Materials Pvt. Ltd.
-                                        11th Floor, Shiva Building, Sarabhai Compound, 
-                                     
-                                        Vadodara, Gujarat 390007
-                                        <!-- <br> India -->
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <!-- Prefooter Section -->
+                <div class="row pre-footer" data-aos="fade-up">
+                    <div class="col-md-4">
+                        <div class="contact-box contactBox">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <div class="contact-details fotterContact">
+                                <h4 class="pre-footer-title">CORPORATE OFFICE</h4>
+                                <p>Shiva Performance Materials Pvt. Ltd.
+                                    11th Floor, Shiva Building, Sarabhai Compound,
 
-                        <div class="col-md-4">
-                            <div class="contact-box">
-                                <i class="fa fa-phone" aria-hidden="true"></i>
-                                <div class="contact-details">
-                                    <h4 class="pre-footer-title">CALL US</h4>
-                                    <p>+91-265-2321418 / 2335432
-                                        <br> FAX: +91-265-2357238
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="contact-box">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                                <div class="contact-details">
-                                    <h4 class="pre-footer-title">EMAIL US</h4>
-                                    <p>marketing@shivaperformance.com
-                                        <br> <br>
-                                    </p>
-                                </div>
+                                    Vadodara, Gujarat 390007
+                                    <!-- <br> India -->
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <!-- Prefooter Section -->
 
-                    <!-- Footer widgets -->
-                    <div class="row widgets" >
-                        <div class="col-md-4 col-sm-6">
-                            <div class="about-txt widget">
-                                <img src="images/logoshivaf.png" alt="logo" />
-
-                                <p>Collaboratively deliver partnerships progressive alignments. Assertively premier
-                                    supply chains before emerging solutions. Monetize high-payoff action items before
-                                    wireless internal or "organic" sources exceptional action items. </p>
-
-                                <div class="widgets-social">
-                                    <a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i> </a>
-                                    <!-- <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a> -->
-                                    <a href="https://www.linkedin.com/in/shiva-performance-materials-vadodara-india-2914ab247?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BUJxXR%2B%2FAT423LogBohDJfg%3D%3D" target="_blank"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                    <a href="https://www.youtube.com/@shivaperformancematerials4748" target="_blank"> <i class="fa fa-youtube" aria-hidden="true"></i></a>
-                                </div>
+                    <div class="col-md-4">
+                        <div class="contact-box">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <div class="contact-details">
+                                <h4 class="pre-footer-title">CALL US</h4>
+                                <p>+91-265-2321418 / 2335432
+                                    <br> FAX: +91-265-2357238
+                                </p>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="newsletter widget">
-                                <!-- <h2 class="widget-title">Address:</h2> -->
+                    </div>
 
-                                <p>Address:</p>
-                                <p>Shiva Performance Materials Pvt. Ltd.
-                                    11th Floor, Shiva Building, Sarabhai Compound, 
-                                    Sarabhai Road, Vadiwadi, 
-                                    Vadodara, Gujarat 390007</p>
-                                <p>Tel: +91 265 231 5000 / 5001</p>
+                    <div class="col-md-4">
+                        <div class="contact-box">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <div class="contact-details">
+                                <h4 class="pre-footer-title">EMAIL US</h4>
+                                <p>marketing@shivaperformance.com
+                                    <br> <br>
+                                </p>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <!-- Prefooter Section -->
 
-                        <div class="spacer-50 visible-sm"></div>
+                <!-- Footer widgets -->
+                <div class="row widgets">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="about-txt widget">
+                            <img src="images/logoshivaf.png" alt="logo" />
 
-                        <!-- <div class="col-md-3 col-sm-6">
+                            <p>Collaboratively deliver partnerships progressive alignments. Assertively premier
+                                supply chains before emerging solutions. Monetize high-payoff action items before
+                                wireless internal or "organic" sources exceptional action items. </p>
+
+                            <div class="widgets-social">
+                                <a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i> </a>
+                                <!-- <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a> -->
+                                <a href="https://www.linkedin.com/in/shiva-performance-materials-vadodara-india-2914ab247?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BUJxXR%2B%2FAT423LogBohDJfg%3D%3D"
+                                    target="_blank"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a href="https://www.youtube.com/@shivaperformancematerials4748" target="_blank"> <i
+                                        class="fa fa-youtube" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="newsletter widget">
+                            <!-- <h2 class="widget-title">Address:</h2> -->
+
+                            <p>Address:</p>
+                            <p>Shiva Performance Materials Pvt. Ltd.
+                                11th Floor, Shiva Building, Sarabhai Compound,
+                                Sarabhai Road, Vadiwadi,
+                                Vadodara, Gujarat 390007</p>
+                            <p>Tel: +91 265 231 5000 / 5001</p>
+                        </div>
+                    </div>
+
+                    <div class="spacer-50 visible-sm"></div>
+
+                    <!-- <div class="col-md-3 col-sm-6">
                             <div class="our-services widget">
                                 <h2 class="widget-title">USA Office</h2>
 
@@ -602,134 +610,134 @@
                                 <p>"Shiva Pharmachem International Inc.",22 Henry Road, Branchburg, NJ, 08876</p>
                             </div>
                         </div> -->
-                        <div class="col-md-3 col-sm-6">
-                            <div class="newsletter widget">
-                                <p>Manufacturing Site :</p>
-                                <p>Plot No.447-460 & 502, Near ECP Canal Road, 
-                                    Village - Karakhadi,
-                                    Tal. – Padra, Dist. – Vadodara, Gujarat, India</p>
-                                <!-- <p class="widget-title">Manufacturing Site</p> -->
-                                <p>+91-2662-273063/4/5, +91-9574001950</p>
-                            </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="newsletter widget">
+                            <p>Manufacturing Site :</p>
+                            <p>Plot No.447-460 & 502, Near ECP Canal Road,
+                                Village - Karakhadi,
+                                Tal. – Padra, Dist. – Vadodara, Gujarat, India</p>
+                            <!-- <p class="widget-title">Manufacturing Site</p> -->
+                            <p>+91-2662-273063/4/5, +91-9574001950</p>
                         </div>
                     </div>
-                    <!-- Footer widgets -->
                 </div>
+                <!-- Footer widgets -->
             </div>
-            <!-- Copyright -->
-            <div class="copyright" id="copyright">
-                <p></p>
-            </div>
-            <!-- Copyright -->
-        </footer>
-        <!-- Footer Section -->
-
-        <!-- back-to-top link -->
-        <a href="#0" class="cd-top"> Top </a>
-
         </div>
+        <!-- Copyright -->
+        <div class="copyright" id="copyright">
+            <p></p>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer Section -->
 
-        <!-- Page Wrapper
+    <!-- back-to-top link -->
+    <a href="#0" class="cd-top"> Top </a>
+
+    </div>
+
+    <!-- Page Wrapper
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-        <script>
-            // Function to close the modal when the close button is clicked
+    <script>
+        // Function to close the modal when the close button is clicked
 
 
-            // Add event listener to the "Close" button
-            var closeButton = document.querySelector('.close2');
-            closeButton.addEventListener('click', function closeModal() {
-                var modalSection = document.querySelector('.modalSection');
-                modalSection.style.display = 'none';
-                let body = document.querySelector('body')
-                enableScroll()
-            });
+        // Add event listener to the "Close" button
+        var closeButton = document.querySelector('.close2');
+        closeButton.addEventListener('click', function closeModal() {
+            var modalSection = document.querySelector('.modalSection');
+            modalSection.style.display = 'none';
+            let body = document.querySelector('body')
+            enableScroll()
+        });
 
-            function disableScroll() {
-                document.body.style.overflow = 'hidden';
-            }
+        function disableScroll() {
+            document.body.style.overflow = 'hidden';
+        }
 
-            // Function to enable scrolling on the background content
-            function enableScroll() {
-                document.body.style.overflow = 'auto';
-            }
-        </script>
+        // Function to enable scrolling on the background content
+        function enableScroll() {
+            document.body.style.overflow = 'auto';
+        }
+    </script>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function(){
-                var modalSection = document.querySelector('.modalSection');
-                modalSection.style.display = 'block'
-                let body = document.querySelector('body')
-                body.style.scrollBehavior =  "none";
-                // disableScroll()
-            })
-        </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var modalSection = document.querySelector('.modalSection');
+            modalSection.style.display = 'block'
+            let body = document.querySelector('body')
+            body.style.scrollBehavior = "none";
+            // disableScroll()
+        })
+    </script>
 
-        <!-- Javascripts
+    <!-- Javascripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-        <!-- Jquery Library -->
-        <script src="js/jquery.min.js"></script>
+    <!-- Jquery Library -->
+    <script src="js/jquery.min.js"></script>
 
-        <!-- Bootstrap core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-        <!-- jQuery Flex Slider -->
-        <script src="js/jquery.flexslider-min.js"></script>
+    <!-- jQuery Flex Slider -->
+    <script src="js/jquery.flexslider-min.js"></script>
 
-        <!-- Owl Carousel -->
-        <script src="js/owl.carousel.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="js/owl.carousel.min.js"></script>
 
-        <!-- Counter JS -->
-        <script src="js/waypoints.min.js"></script>
-        <script src="js/jquery.counterup.min.js"></script>
+    <!-- Counter JS -->
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
 
-        <!-- Back to top -->
-        <script src="js/back-to-top.js"></script>
+    <!-- Back to top -->
+    <script src="js/back-to-top.js"></script>
 
-        <!-- Form Validation -->
-        <script src="js/validate.js"></script>
+    <!-- Form Validation -->
+    <script src="js/validate.js"></script>
 
-        <!-- Subscribe Form JS -->
-        <script src="js/subscribe.js"></script>
+    <!-- Subscribe Form JS -->
+    <script src="js/subscribe.js"></script>
 
-        <!-- Main JS -->
-        <script src="js/main.js"></script>
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
 
-    </body>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            window.addEventListener('scroll', function () {
-                if (window.scrollY > 100) {
-                    $('.logoC').removeClass('logo-top-info');
-                    $('.logoC').addClass('logo-top-infoo');
-                    $('.headerC').removeClass('header-con');
-                    $('.headerC').addClass('header-conn');
-                    document.querySelector('nav').removeAttribute('id', 'navbar');
-                    document.querySelector('nav').setAttribute('id', 'navbarr');
-                }
-                else {
-                    $('.logoC').removeClass('logo-top-infoo');
-                    $('.logoC').addClass('logo-top-info');
-                    $('.headerC').removeClass('header-conn');
-                    $('.headerC').addClass('header-con');
-                    document.querySelector('nav').removeAttribute('id', 'navbarr');
-                    document.querySelector('nav').setAttribute('id', 'navbar');
-                }
-            });
-        }); 
-    </script>
-    <script>
-        fetch(`/data`)
-            .then(response => { console.log(response.textData) }
-            )
-            .catch(error => {
-                console.error('Failed to fetch data:', error);
-            });
-    </script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 100) {
+                $('.logoC').removeClass('logo-top-info');
+                $('.logoC').addClass('logo-top-infoo');
+                $('.headerC').removeClass('header-con');
+                $('.headerC').addClass('header-conn');
+                document.querySelector('nav').removeAttribute('id', 'navbar');
+                document.querySelector('nav').setAttribute('id', 'navbarr');
+            }
+            else {
+                $('.logoC').removeClass('logo-top-infoo');
+                $('.logoC').addClass('logo-top-info');
+                $('.headerC').removeClass('header-conn');
+                $('.headerC').addClass('header-con');
+                document.querySelector('nav').removeAttribute('id', 'navbarr');
+                document.querySelector('nav').setAttribute('id', 'navbar');
+            }
+        });
+    }); 
+</script>
+<script>
+    fetch(`/data`)
+        .then(response => { console.log(response.textData) }
+        )
+        .catch(error => {
+            console.error('Failed to fetch data:', error);
+        });
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 </html>

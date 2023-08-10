@@ -115,7 +115,7 @@ const transporter = nodemailer.createTransport({
   service: "Gmail", // Replace with your email service provider
   secure: true,
   auth: {
-    user: "shwetal.sakaria@shivaperformance.com", // Replace with your email address
+    user: "marketing@shivaperformance.com", // Replace with your email address
     pass: password // Replace with your email password
   },
 });
@@ -128,7 +128,7 @@ app.post("/receive-email", (req, res) => {
   // Create an email message
   const mailOptions = {
     email,
-    to: "shwetal.sakaria@shivaperformance.com", // Replace with your email address
+    to: "marketing@shivaperformance.com", // Replace with your email address
     subject,
     text: Newmessage,
   };

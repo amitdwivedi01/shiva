@@ -296,7 +296,7 @@ main.main {
 }
 
 .logo img {
-    height: 50px;
+    height: 70px;
 }
 
 .top-info {
@@ -4106,6 +4106,26 @@ ul.nav-tabs {
     justify-content: center;
     align-items: center;
 } */
+
+.service-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 30%; */
+}
+
+.service__text{
+    width: 75%;
+}
+
+.serviceimg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: auto;
+}
 
 .home-services {
     background-image: url("../images/bg.png");
